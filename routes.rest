@@ -9,68 +9,75 @@ GET http://localhost:3000/cars
 GET http://localhost:3000/cars/63df3547c2a426f406c4de09
 
 
-### Create contact
-# POST http://localhost:3000/cars HTTP/1.1
-# content-type: application/json
+### Create car
+POST http://localhost:3000/cars HTTP/1.1
+content-type: application/json
 
-# {
-#     "firstName":"Madi",
-#     "lastName":"Hathaway",
-#     "email":"mburt17@gmail.com",
-#     "favoriteColor":"Blue",
-#     "birthday":"08/19/1996"
-# }
-### 63d9bad104d0188d5a2305f7
+{
+  "make": "Lexus",
+  "model": "RX350",
+  "year": "2023",
+  "color": "Black",
+  "displacement": "3.5 L",
+  "horsepower": "270 @ 6,200 rpm",
+  "engineType": "Gas",
+  "transmission": "5-speed automatic",
+  "drivetrain": "All wheel"
+}
 
 
 ### PUT contact (Update)
-# PUT http://localhost:3000/cars/63d01487d9f1f6b924fca5f5 HTTP/1.1
-# content-type: application/json
+PUT http://localhost:3000/cars/63df3539c2a426f406c4de08 HTTP/1.1
+content-type: application/json
 
-# {
-#   "firstName": "Bruce",
-#   "lastName": "Wayne",
-#   "email": "bwayne@wayneindustries.com",
-#   "favoriteColor": "Black",
-#   "birthday": "07/21/83"
-# }
+{
+  "make": "Lexus",
+  "model": "RX350",
+  "year": "2009",
+  "color": "Black",
+  "displacement": "3.5 L",
+  "horsepower": "270 @ 6,200 rpm",
+  "engineType": "Gas",
+  "transmission": "5-speed automatic",
+  "drivetrain": "All wheel"
+}
 
 ### DELETE contact
-# DELETE http://localhost:3000/cars/63dc9405fd4c8e9ea3c8a9f1 HTTP/1.1
+DELETE http://localhost:3000/cars/63df409eb0951160e8a54127 HTTP/1.1
 
 
 #***************************
 # PRODUCTION Deploy
 #***************************
 
-### Get all contacts
+### Get all cars
 GET https://abhathaway-cse341-techspec.onrender.com/cars
 
 
-### Get contact by id
+### Get car by id
 GET https://abhathaway-cse341-techspec.onrender.com/cars/63df3539c2a426f406c4de08
 
 
-### Create contact
-# POST https://abhathaway-cse341.onrender.com/cars HTTP/1.1
-# content-type: application/json
+### Create car
+POST https://abhathaway-cse341-techspec.onrender.com/cars HTTP/1.1
+content-type: application/json
 
-# {
-#    "make": "Lexus",
-#    "model": "RX350",
-#    "year": "2023",
-#    "color": "Black",
-#    "displacement": "3.5 L",
-#    "horsepower": "270 @ 6,200 rpm",
-#    "engineType": "Gas",
-#    "transmission": "5-speed automatic",
-#    "drivetrain": "All wheel"
-# }
+{
+   "make": "Lexus",
+   "model": "RX350",
+   "year": "2023",
+   "color": "Black",
+   "displacement": "3.5 L",
+   "horsepower": "270 @ 6,200 rpm",
+   "engineType": "Gas",
+   "transmission": "5-speed automatic",
+   "drivetrain": "All wheel"
+}
 
 
 ### PUT contact
-# PUT https://abhathaway-cse341.onrender.com/contacts/63d014b2d9f1f6b924fca5f6 HTTP/1.1
-# content-type: application/json
+PUT https://abhathaway-cse341-techspec.onrender.com/cars/63d014b2d9f1f6b924fca5f6 HTTP/1.1
+content-type: application/json
 
 # {
 #     "firstName":"Tony",
@@ -82,4 +89,4 @@ GET https://abhathaway-cse341-techspec.onrender.com/cars/63df3539c2a426f406c4de0
 
 
 ### DELETE contact
-# DELETE https://abhathaway-cse341.onrender.com/contacts/63dc943c1619272c0d66dba3 HTTP/1.1
+DELETE https://abhathaway-cse341-techspec.onrender.com/cars/63dc943c1619272c0d66dba3 HTTP/1.1
